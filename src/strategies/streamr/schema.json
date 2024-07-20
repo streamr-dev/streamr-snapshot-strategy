@@ -12,14 +12,6 @@
           "examples": ["e.g. DATA (operator)"],
           "maxLength": 16
         },
-        "tokenAddress": {
-          "type": "string",
-          "title": "DATA token address",
-          "examples": ["e.g. 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"],
-          "pattern": "^0x[a-fA-F0-9]{40}$",
-          "minLength": 42,
-          "maxLength": 42
-        },
         "operatorFactoryAddress": {
           "type": "string",
           "title": "OperatorFactory address",
