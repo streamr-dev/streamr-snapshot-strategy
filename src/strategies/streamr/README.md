@@ -6,14 +6,15 @@ Operators are the node running "miners" in the Streamr Network. They run Streamr
 
 This is why part of the Operators' DATA tokens are staked in Sponsorships (through an Operator contract that they control). Only a small portion of DATA is expected to be in the Streamr Network participants' wallets, the rest is staked or delegated into the Streamr Network.
 
-The point of the Streamr snapshot strategy is to allocate voting power not only according to DATA token holding (as in the plain erc-20-balance-of strategy), but also counting in the DATA tokens the token holders control via staking and delegation.
+The Streamr snapshot strategy counts the "Operator value" of the Operator contract associated with the voter, which is the total DATA the voter controls through the Operator contract. It roughly equals the DATA delegated to the Operator, plus earnings the Operator has received from the Sponsorship contracts.
+
+This makes it possible to give voting power not only according to DATA token holdings (using the plain erc20-balance-of strategy), but also counting in the DATA tokens the token holders have employed in the Streamr Network incentivization mechanisms.
 
 ## Parameters
 
 ```json
 {
   "symbol": "DATA (operator)",
-  "tokenAddress": "0x3a9A81d576d83FF21f26f325066054540720fC34",
   "operatorFactoryAddress": "0x935734e66729b69260543Cf6e5EfeB42AC962183"
 }
 ```
